@@ -2445,19 +2445,23 @@ function giveAnswer(){
         slMash = `${parseFloat(document.getElementById(`secondLine--one`).innerHTML)}${parseFloat(document.getElementById(`secondLine--two`).innerHTML)}${parseFloat(document.getElementById(`secondLine--three`).innerHTML)}${parseFloat(document.getElementById(`secondLine--four`).innerHTML)}${parseFloat(document.getElementById(`secondLine--five`).innerHTML)}${parseFloat(document.getElementById(`secondLine--six`).innerHTML)}${parseFloat(document.getElementById(`secondLine--seven`).innerHTML)}${parseFloat(document.getElementById(`secondLine--eight`).innerHTML)}`
     }
     if (cycleCounter === 2){
-        finalAnswer = flMash + slMash;
+        finalAnswer = +flMash + +slMash;
+        document.getElementById(`output`).innerHTML = finalAnswer;
         console.log(finalAnswer);
     }
     else if (cycleCounter === 3){
         finalAnswer = flMash - slMash;
+        document.getElementById(`output`).innerHTML = finalAnswer;
         console.log(finalAnswer);
     }
     else if (cycleCounter === 4){
         finalAnswer = flMash * slMash;
+        document.getElementById(`output`).innerHTML = finalAnswer;
         console.log(finalAnswer);
     }
     else if (cycleCounter === 5){
         finalAnswer = flMash / slMash;
+        document.getElementById(`output`).innerHTML = finalAnswer;
         console.log(finalAnswer);
     }
 }
