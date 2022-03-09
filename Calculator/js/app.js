@@ -2461,3 +2461,7 @@ function giveAnswer(){
         document.getElementById(`output`).innerHTML = `Answer: ` + finalAnswer.toLocaleString();
     }
 }
+
+document.getElementById(`reset`).addEventListener(`click`, function(){
+    location.reload();
+});
