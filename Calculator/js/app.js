@@ -2446,22 +2446,18 @@ function giveAnswer(){
     }
     if (cycleCounter === 2){
         finalAnswer = +flMash + +slMash;
-        document.getElementById(`output`).innerHTML = finalAnswer;
-        console.log(finalAnswer);
+        document.getElementById(`output`).innerHTML = `Answer: ` + finalAnswer.toLocaleString();
     }
     else if (cycleCounter === 3){
         finalAnswer = flMash - slMash;
-        document.getElementById(`output`).innerHTML = finalAnswer;
-        console.log(finalAnswer);
+        document.getElementById(`output`).innerHTML = `Answer: ` + finalAnswer.toLocaleString();
     }
     else if (cycleCounter === 4){
         finalAnswer = flMash * slMash;
-        document.getElementById(`output`).innerHTML = finalAnswer;
-        console.log(finalAnswer);
+        document.getElementById(`output`).innerHTML = `Answer: ` + finalAnswer.toLocaleString();
     }
     else if (cycleCounter === 5){
-        finalAnswer = flMash / slMash;
-        document.getElementById(`output`).innerHTML = finalAnswer;
-        console.log(finalAnswer);
+        finalAnswer = Math.round((flMash / slMash) * 100) / 100;
+        document.getElementById(`output`).innerHTML = `Answer: ` + finalAnswer.toLocaleString();
     }
 }
